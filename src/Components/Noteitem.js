@@ -17,7 +17,7 @@ const Noteitem = (props) => {
             <div className="card cardi">
 
                 <span className="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger overwr">
-                <i className="fas fa-trash mx-2 my-1" onClick={() => { return deleteNote(notes._id) ,props.showAlert("Deleted successfully", "success");}}></i>
+                <i className="fas fa-trash mx-2 my-1" onClick={() => { deleteNote(notes._id); props.showAlert("Deleted successfully", "success");}}></i>
                 <i className="fas fa-edit mx-2 my-1" onClick={() => { return updatenote(notes) }}></i>
             </span>
                 <div className="card-body ">
