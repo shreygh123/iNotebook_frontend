@@ -7,7 +7,7 @@ const Login = (props) => {
     const navigate = useNavigate();
     const handleClick = async(e) => {
         e.preventDefault();
-            const response = await fetch("https://i-notebook-backend-l06pv99ct-shreyash-ghuges-projects.vercel.app/api/auth/login", {
+            const response = await fetch("https://inotebook-backend-gddm.onrender.com/api/auth/login", {
             // const response = await fetch("http://localhost:5000/api/auth/login", {
               method: 'POST',
               headers: {
