@@ -7,15 +7,15 @@ const Login = (props) => {
     const navigate = useNavigate();
     const handleClick = async(e) => {
         e.preventDefault();
-            // API Call http://localhost:5000
             const response = await fetch("https://i-notebook-backend-l06pv99ct-shreyash-ghuges-projects.vercel.app/api/auth/login", {
             // const response = await fetch("http://localhost:5000/api/auth/login", {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
                 "auth-token": localStorage.getItem("token")
-                       },
-              body: JSON.stringify({ email:credentials.email ,password:credentials.password })
+              },
+              body: JSON.stringify({ email:credentials.email ,password:credentials.password }),
+              credentials: "include"
             });
             const json = await response.json()
             console.log(json);
@@ -28,7 +28,6 @@ const Login = (props) => {
             else{
                 props.showAlert("Invalid Details" , "danger");
             }
-
           }
       
       const onChange = (e) => {
