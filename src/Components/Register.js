@@ -20,7 +20,8 @@ const Register = (props) => {
                 'Content-Type': 'application/json' ,
                 "auth-token": localStorage.getItem("token")
                        },
-              body: JSON.stringify({ name,email,password })
+              body: JSON.stringify({ name,email,password }),
+              credentials: "include", 
             });
             const json = await response.json()
             console.log(json);
